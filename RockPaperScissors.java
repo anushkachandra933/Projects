@@ -1,5 +1,7 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
 import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
@@ -14,29 +16,27 @@ class Main {
            System.out.print("Enter choice(Person 2): ");
            char p2 = sc.next().charAt(0);
            if(p1 == 'R' && p2 == 'S'){
-               System.out.println("Person 1 wins!!");
                count1++;
            }else if(p1 == 'S' && p2 == 'R'){
-               System.out.println("Person 2 wins!!");
                count2++;
            }else if(p1 == 'S' && p2 == 'P'){
-               System.out.println("Person 1 wins!!");
                count1++;
            }else if(p1 == 'P' && p2 == 'S'){
-               System.out.println("Person 2 wins!!");
                count2++;
            }else if(p1 == 'R' && p2 == 'P'){
-               System.out.println("Person 2 wins!!");
                count2++;
            }else if(p1 == 'P' && p2 == 'R'){
-               System.out.println("Person 1 wins!!");
                count1++ ;
-           }else if(p1 == p2){
-               System.out.println("Tie!!");
            }else{
                System.out.println("INVALID INPUT");
            }
         }
-      System.out.println("Person 1 wins "+count1+" times and Person2 wins "+count2+" times");
+      if(count1 > count2){
+          System.out.println("Person 1 wins!!");
+      }else if(count2 > count1){
+          System.out.println("Person 2 wins!!");
+      }else{
+          System.out.println("There is a tie!!");
+      }
     }
 }
